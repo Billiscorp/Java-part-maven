@@ -1,0 +1,7 @@
+.idea/
+java-part.iml
+Java-part-maven.iml
+out/
+lib/
+target/
+.gitignore
