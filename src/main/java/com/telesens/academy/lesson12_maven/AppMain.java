@@ -1,4 +1,4 @@
-package com.telesens.academy.lesson11_maven;
+package com.telesens.academy.lesson12_maven;
 
 public class AppMain {
 
