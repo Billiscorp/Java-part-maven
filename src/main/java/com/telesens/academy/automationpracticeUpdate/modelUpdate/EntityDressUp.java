@@ -256,4 +256,17 @@ public class EntityDressUp implements Comparable<EntityDressUp> {
     public int compareTo (EntityDressUp other) {
         return this.model.compareTo(other.model);
     }
+
+    /**
+     * Сравнивает этот объект 'this' со переданным 'other'.
+     * Возвращает:
+     *  0 - если объекты равны
+     *  -1 - если 'this' меньше 'other'
+     *  1 - если 'this' больше 'other'
+     * Данный метод вызывается алгоритмом сортировки для упорядочивания
+     */
+   /* @Override
+    public int compareTo(EntityDressUp other) {
+        return Double.compare(other.price, this.price);
+    }*/
 }
