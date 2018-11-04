@@ -1,9 +1,9 @@
 package com.telesens.academy.lesson11;
 
 
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.comporator.ComparatorDressByName;
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.comporator.ComparatorDressByNamePriceDesc;
+import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
+import com.telesens.academy.automationpracticeOld.modelUpdate.comporator.ComparatorDressByName;
+import com.telesens.academy.automationpracticeOld.modelUpdate.comporator.ComparatorDressByNamePriceDesc;
 
 import java.util.Arrays;
 

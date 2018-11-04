@@ -1,8 +1,9 @@
-package com.telesens.academy.automationpracticeUpdate.tests;
+package com.telesens.academy.automationpractice.tests;
 
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
+import com.telesens.academy.automationpractice.model.EntityDress;
 
-/*public class CartTestsUp {
+
+/*public class CartTests {
 
     private String browser;
     private String baseUrl;
@@ -60,7 +61,7 @@ import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
 }*/
 
 
-public class CartTestsUp {
+public class CartTests {
 
     private String browser;
     private String baseUrl;
@@ -70,16 +71,16 @@ public class CartTestsUp {
         this.baseUrl = baseUrl;
     }
 
-    public void testAddDressToCart(EntityDressUp addedDress, int amount) {
+    public void testAddDressToCart(EntityDress addedDress, int amount) {
         beforeTest();
         System.out.println("Find and Click more by " + addedDress);
-//        EntityDressUp entityAdded = readCurrentEntityFromUI();
+//        EntityDress entityAdded = readCurrentEntityFromUI();
 
         System.out.println(String.format("Add entity '%s', amount: %d to cart",
                 addedDress, amount));
         System.out.println("Go to cart");
 
-        EntityDressUp entityFromCart = readEntityFromCart();
+        EntityDress entityFromCart = readEntityFromCart();
         int  amountFromCart = readAmountFromCart();
         double totalFromCart = readTotalFromCart();
         double total = amountFromCart*addedDress.getPrice();
@@ -101,8 +102,8 @@ public class CartTestsUp {
         return 2;
     }
 
-    private EntityDressUp readEntityFromCart() {
-        EntityDressUp entityFromCart = new EntityDressUp();
+    private EntityDress readEntityFromCart() {
+        EntityDress entityFromCart = new EntityDress();
         entityFromCart.setName("Printed Dress");
         entityFromCart.setModel("demo_3");
         entityFromCart.setSize("S");
@@ -111,8 +112,8 @@ public class CartTestsUp {
         return entityFromCart;
     }
 
-    private EntityDressUp readCurrentEntityFromUI() {
-        EntityDressUp entityAdded = new EntityDressUp();
+    private EntityDress readCurrentEntityFromUI() {
+        EntityDress entityAdded = new EntityDress();
         entityAdded.setName("Printed Dress");
         entityAdded.setModel("demo_3");
         entityAdded.setSize("S");

@@ -1,4 +1,4 @@
-package com.telesens.academy.automationpracticeUpdate.tests;
+package com.telesens.academy.automationpracticeOld.tests;
 
 /*=========== ADD MODEL TO WISH TEST =========
         Создать тест для сайта automationpractice.com:

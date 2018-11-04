@@ -1,7 +1,7 @@
 package com.telesens.academy.lesson11;
 
 
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
+import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
 
 import java.util.Arrays;
 

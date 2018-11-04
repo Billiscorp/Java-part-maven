@@ -1,4 +1,4 @@
-package com.telesens.academy.automationpracticeUpdate.tests;
+package com.telesens.academy.automationpracticeOld.tests;
 
 
 /*=========== MY WISH CREATION TEST =========

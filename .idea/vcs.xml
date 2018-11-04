@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/java/com/telesens/academy/login_form_fx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/java/com/telesens/academy/login_form_fx/login-form-fx" vcs="Git" />
   </component>
 </project>

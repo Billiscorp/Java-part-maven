@@ -1,4 +1,4 @@
-package com.telesens.academy.automationpracticeUpdate.modelUpdate;
+package com.telesens.academy.automationpracticeOld.modelUpdate;
 
 /*public class EntityDress1 {
 

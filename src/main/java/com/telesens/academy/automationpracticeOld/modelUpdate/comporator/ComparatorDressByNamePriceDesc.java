@@ -1,6 +1,6 @@
-package com.telesens.academy.automationpracticeUpdate.modelUpdate.comporator;
+package com.telesens.academy.automationpracticeOld.modelUpdate.comporator;
 
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
+import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
 
 import java.util.Comparator;
 
@@ -15,7 +15,8 @@ public class ComparatorDressByNamePriceDesc implements Comparator<EntityDressUp>
             if (cmp == 0) {
                 cmp = Double.compare(o1.getPrice(), o2.getPrice());
             }*/
-            return cmp;
+//            return cmp;
+            return 0; // заглушка
         }
     }
 

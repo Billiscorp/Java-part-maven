@@ -1,8 +1,8 @@
-package com.telesens.academy.automationpracticeUpdate.addres;
+package com.telesens.academy.automationpractice.addres;
 
 import com.academy.automationpractice.ddt.framework.model.AddressData;
 
-public class ParseAddresDemo {
+public class ParseAddressDemo {
 
     public static void main(String[] args) {
 
@@ -55,7 +55,7 @@ public class ParseAddresDemo {
 
     }
 
-    private static AddressData parseAddress(String addressString) {
+    public static AddressData parseAddress(String addressString) {
 
         final int FIRST_NAME_INDEX = 0;
         final int LAST_NAME_INDEX = 1;

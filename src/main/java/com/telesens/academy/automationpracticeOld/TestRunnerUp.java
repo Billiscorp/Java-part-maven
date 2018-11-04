@@ -1,7 +1,7 @@
-package com.telesens.academy.automationpracticeUpdate;
+package com.telesens.academy.automationpracticeOld;
 
-import com.telesens.academy.automationpracticeUpdate.modelUpdate.EntityDressUp;
-import com.telesens.academy.automationpracticeUpdate.tests.CartTestsUp;
+import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
+import com.telesens.academy.automationpracticeOld.tests.CartTestsUp;
 
 public class TestRunnerUp {
 
