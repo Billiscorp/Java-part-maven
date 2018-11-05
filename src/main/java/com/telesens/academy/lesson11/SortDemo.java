@@ -1,15 +1,17 @@
 package com.telesens.academy.lesson11;
 
 
-import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
-import com.telesens.academy.automationpracticeOld.modelUpdate.comporator.ComparatorDressByName;
-import com.telesens.academy.automationpracticeOld.modelUpdate.comporator.ComparatorDressByNamePriceDesc;
+import com.telesens.academy.automationpractice.model.EntityDress;
+import com.telesens.academy.automationpractice.model.comporator.ComparatorByNameAndPriceDesc;
+import com.telesens.academy.automationpractice.model.comporator.ComparatorDressByName;
+
+
 
 import java.util.Arrays;
 
 public class SortDemo {
     public static void main(String[] args) {
-        EntityDressUp[] actualDresses = getActualDresses();
+        EntityDress[] actualDresses = getActualDresses();
         System.out.println(Arrays.toString(actualDresses));
         Arrays.sort(actualDresses);
         System.out.println(Arrays.toString(actualDresses));
@@ -18,37 +20,37 @@ public class SortDemo {
         System.out.println(Arrays.toString(actualDresses));
 
         System.out.println("********** Sort By Name and Price Desc************");
-        Arrays.sort(actualDresses, new ComparatorDressByNamePriceDesc());
+        Arrays.sort(actualDresses, new ComparatorByNameAndPriceDesc());
         System.out.println(Arrays.toString(actualDresses));
 
 
 
     }
 
-    private static EntityDressUp[] getActualDresses() {
-        return new EntityDressUp[]{
-                new EntityDressUp()
+    private static EntityDress[] getActualDresses() {
+        return new EntityDress[]{
+                new EntityDress()
                         .withModel("demo_3")
                         .withName("Printed Dress")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(26.00),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_4")
                         .withName("Printed Dress")
                         .withColor("Beige")
                         .withSize("S")
                         .withPrice(50.99),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_1")
                         .withName("Faded Short Sleeve T-shirts")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(16.51),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_5")
                         .withName("Printed Summer Dress")
                         .withColor("Yellow")

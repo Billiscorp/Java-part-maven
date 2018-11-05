@@ -257,6 +257,9 @@ public class EntityDress implements Comparable<EntityDress> {
         return this.model.compareTo(other.model);
     }
 
+
+
+    //TODO разобраться !!!!!
     /**
      * Сравнивает этот объект 'this' со переданным 'other'.
      * Возвращает:
