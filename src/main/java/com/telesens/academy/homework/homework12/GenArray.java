@@ -25,13 +25,25 @@ public class GenArray <T> {
         this.array = array;
     }
 
-    public T[] getArray() {
+
+    public T get(int index) {
+        return this.array[index];
+    }
+
+    public void set(int index, T element) {
+        this.array[index] = element;
+    }
+
+
+
+
+    /*public T[] getArray() {
         return array;
     }
 
     public void setArray(T[] array) {
         this.array = array;
-    }
+    }*/
 
     @Override
     public String toString() {
