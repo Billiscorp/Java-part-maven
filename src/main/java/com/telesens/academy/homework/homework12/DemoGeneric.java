@@ -8,5 +8,11 @@ public class DemoGeneric {
 
         GenArray <Integer> genArray = new GenArray <> (array);
         System.out.println(genArray);
+        System.out.println(genArray.get(2));
+
+        genArray.set(4,10);
+        System.out.println(genArray.get(4));
+
+
     }
 }

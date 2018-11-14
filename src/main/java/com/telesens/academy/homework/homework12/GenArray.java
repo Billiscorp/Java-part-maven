@@ -25,11 +25,11 @@ public class GenArray <T> {
         this.array = array;
     }
 
-
+// TODO exeption
     public T get(int index) {
         return this.array[index];
     }
-
+// // TODO exeption
     public void set(int index, T element) {
         this.array[index] = element;
     }
