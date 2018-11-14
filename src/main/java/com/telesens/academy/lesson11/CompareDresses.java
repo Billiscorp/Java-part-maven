@@ -1,7 +1,9 @@
 package com.telesens.academy.lesson11;
 
 
-import com.telesens.academy.automationpracticeOld.modelUpdate.EntityDressUp;
+
+
+import com.telesens.academy.automationpractice.model.EntityDress;
 
 import java.util.Arrays;
 
@@ -10,8 +12,8 @@ public class CompareDresses {
         String[] expectedModels = {"demo_1", "demo_3", "demo_4", "demo_5"};
         String[] actualModels = {"demo_3", "demo_4", "demo_1", "demo_5"};
 
-        EntityDressUp[] expectedDresses = getExpectedDresses();
-        EntityDressUp[] actualDresses = getActualDresses();
+        EntityDress[] expectedDresses = getExpectedDresses();
+        EntityDress[] actualDresses = getActualDresses();
         boolean assertByModel = compare(expectedModels, actualModels);
         boolean assertByDress = compare(expectedDresses, actualDresses);
 
@@ -36,7 +38,7 @@ public class CompareDresses {
     }
 
     // TODO
-    private static boolean compare(EntityDressUp[] expected, EntityDressUp[] actual) {
+    private static boolean compare(EntityDress[] expected, EntityDress[] actual) {
 
         Arrays.sort(expected);
         Arrays.sort(actual);
@@ -45,30 +47,30 @@ public class CompareDresses {
 
     }
 
-    private static EntityDressUp[] getExpectedDresses() {
-        return new EntityDressUp[]{
-                new EntityDressUp()
+    public static EntityDress[] getExpectedDresses() {
+        return new EntityDress[]{
+                new EntityDress()
                         .withModel("demo_1")
                         .withName("Faded Short Sleeve T-shirts")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(16.51),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_3")
                         .withName("Printed Dress")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(26.00),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_4")
                         .withName("Printed Dress")
                         .withColor("Beige")
                         .withSize("S")
                         .withPrice(50.99),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_5")
                         .withName("Printed Summer Dress")
                         .withColor("Yellow")
@@ -77,30 +79,30 @@ public class CompareDresses {
         };
     }
 
-    private static EntityDressUp[] getActualDresses() {
-        return new EntityDressUp[]{
-                new EntityDressUp()
+    public static EntityDress[] getActualDresses() {
+        return new EntityDress[]{
+                new EntityDress()
                         .withModel("demo_3")
                         .withName("Printed Dress")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(26.00),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_4")
                         .withName("Printed Dress")
                         .withColor("Beige")
                         .withSize("S")
                         .withPrice(50.99),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_1")
                         .withName("Faded Short Sleeve T-shirts")
                         .withColor("Orange")
                         .withSize("S")
                         .withPrice(16.51),
 
-                new EntityDressUp()
+                new EntityDress()
                         .withModel("demo_5")
                         .withName("Printed Summer Dress")
                         .withColor("Yellow")
