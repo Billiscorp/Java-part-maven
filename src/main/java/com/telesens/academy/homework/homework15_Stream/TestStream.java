@@ -1,6 +1,7 @@
 package com.telesens.academy.homework.homework15_Stream;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class TestStream {
 
@@ -47,7 +48,8 @@ public class TestStream {
             Set<Subscriber> setSubscibers = new HashSet(Arrays.asList(tesrSubscibers)); //  tesrSubscibers  arraySubscibers
             List<Subscriber> listSubscibers = new ArrayList<>(setSubscibers);
             listSubscibers.stream()
-                    .sorted((Comparator.comparing(Subscriber::getId)));
+                    .sorted((Comparator.comparing(Subscriber::getId)))
+                    .collect(Collectors.toList());
             System.out.println(listSubscibers);
             System.out.println();
 
