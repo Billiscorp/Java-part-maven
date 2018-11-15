@@ -34,7 +34,6 @@ public class TestStream {
             tesrSubscibers[8] = new Subscriber (5L,firstName="Вася", lastName="Половик", age=48, phoneNumber="9997929800"); //phoneNumber
             tesrSubscibers[9] = new Subscriber (5L,firstName="Вася", lastName="Половик", age=48, phoneNumber="9997929800");
 
-//            System.out.println(Arrays.toString(tesrSubscibers));
             Arrays.stream(tesrSubscibers).forEach(System.out::println);
 
             System.out.println();
@@ -52,34 +51,7 @@ public class TestStream {
                     .sorted((Comparator.comparing(Subscriber::getId)))          // отсортировать по id
                     .peek(System.out::println)
                     .collect(Collectors.toList());                              // сохранить в список (List)
-//            System.out.println(listSub3);
             System.out.println();
-
-// TODO
-            /*List listSub3 = new ArrayList<>(Arrays.asList(tesrSubscibers)).stream()
-                    .distinct()
-                    .sorted((Comparator.comparing(Subscriber::getId)))
-                    .peek(f-> {
-                        String replace = f.getFirstName()
-                                        .replace
-                                                (f.getFirstName().substring(0, 1),
-                                                        f.getFirstName().substring(0, 1).toLowerCase());
-                            }
-
-                    )
-                    *//*
-                    .peek(f-> {
-                            String replace = f.getFirstName()
-                                    .replace
-                                            (f.getFirstName().substring(0, 1),
-                                                    f.getFirstName().substring(0, 1).toLowerCase());
-
-                    })*//*
-                    .peek(System.out::println)
-                    .collect(Collectors.toList());
-//            System.out.println(listSub3);
-            System.out.println();*/
-
 
 
             System.out.println("4) Из списка абонентов:\n" +
@@ -105,7 +77,6 @@ public class TestStream {
                     })*/
                     .peek(System.out::println)
                     .collect(Collectors.toList());
-//            System.out.println(listSub4);
             System.out.println();
 
 
@@ -116,11 +87,10 @@ public class TestStream {
 
 
         List listSub5 = new ArrayList<>(Arrays.asList(tesrSubscibers)).stream()
-//                .   // исключить дубликаты по телефонном номеру* (не обязательно)
+//                .                                                                                     // исключить дубликаты по телефонном номеру* (не обязательно)
                 .filter(p->p.getPhoneNumber().substring(p.getPhoneNumber().length()-1).equals("5"))     // отфильтровать по последней цифре номера = 5
                 .peek(System.out::println)
                 .collect(Collectors.toList());
-//            System.out.println(listSub3);
             System.out.println();
 
         double listSub5_3 = new ArrayList<>(Arrays.asList(tesrSubscibers)).stream()                     // посчитать средний возраст
