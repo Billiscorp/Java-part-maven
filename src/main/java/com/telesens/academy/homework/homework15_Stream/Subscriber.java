@@ -1,14 +1,46 @@
 package com.telesens.academy.homework.homework15_Stream;
 
+
+/*
+1)  Реализовать класс Subscriber (Абонент), который хранит информацию об абоненте:
+        поля:
+        - private Long id; 				// уникальный идентификатор
+        - private String firstName; 	// имя
+        - private String lastName;  	// фамилия
+        - private int age; 				// возраст
+        - private String phoneNumber; 	// телефонный номер (12 цифр: 380509373356)
+
+        методы (перегруженные):
+        - public toString (); 	// возвращает строку об абоненте
+        - public equals();  	// использовать автогенерацию (по всем полям)
+        - public hashCode(); 	// использовать автогенерацию
+
+        методы для каждого поля (Использовать автогенерацию)
+        - public get...
+        - public set...
+
+        реализует интерфейс:
+        - Comparable // сравнивает двух абонентов по полю id (нужно для сортировки)
+*/
+
 import java.util.Objects;
 
-public class Subscriber {
+public class Subscriber implements Comparable<Subscriber> {
 
     private Long id; 				// уникальный идентификатор
 	private String firstName; 	// имя
 	private String lastName;  	// фамилия
 	private int age; 				// возраст
 	private String phoneNumber; 	// телефонный номер (12 цифр: 380509373356)
+
+
+    public Subscriber(Long id, String firstName, String lastName, int age, String phoneNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+    }
 
     public Long getId() {
         return id;
@@ -77,9 +109,9 @@ public class Subscriber {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
-//TODO !!!!!!!
-    // сравнивает двух абонентов по полю id (нужно для сортировки)
-    public interface Comparable {
 
+    @Override
+    public int compareTo(Subscriber o) {
+        return 0;
     }
 }
