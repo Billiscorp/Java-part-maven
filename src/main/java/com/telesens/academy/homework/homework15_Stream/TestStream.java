@@ -41,7 +41,7 @@ public class TestStream {
             System.out.println();
 
 
-            System.out.println("#3)  Из массива:\n" +
+            System.out.println("3)  Из массива:\n" +
                     "                - исключить дубликаты\n" +
                     "                - отсортировать по id,\n" +
                     "                - сохранить в список (List)");
@@ -65,13 +65,17 @@ public class TestStream {
             List listSub4 = new ArrayList<>(Arrays.asList(tesrSubscibers)).stream()
                     .sorted(Comparator.comparing(Subscriber::getPhoneNumber))   // отсортировать по телефонному номеру
                     .filter(a->a.getAge()>=20 && a.getAge()<=30)                // отфильтровать по возрасту от 20 до 30
-                   /* .peek(f-> {
-                            String replace = f.getFirstName()
+                    .peek(System.out::println)
+                    .map(f-> f.getFirstName()
+                                .replace
+                                        (f.getFirstName().substring(0, 1),
+                                                f.getFirstName().substring(0, 1).toLowerCase()))
+ /*                   .peek(f-> f.getFirstName()
                                     .replace
                                             (f.getFirstName().substring(0, 1),
-                                                    f.getFirstName().substring(0, 1).toLowerCase());
-                    })
-                    .peek(f-> {
+                                                    f.getFirstName().substring(0, 1).toLowerCase()))*/
+
+                    /*.peek(f-> {
                             String replace = f.getFirstName()
                                     .replace(f.getFirstName().substring(0, 1), f.getFirstName().substring(0, 1).toLowerCase());
                     })*/
