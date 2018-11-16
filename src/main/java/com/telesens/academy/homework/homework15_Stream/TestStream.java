@@ -1,6 +1,7 @@
 package com.telesens.academy.homework.homework15_Stream;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class TestStream {
@@ -57,28 +58,43 @@ public class TestStream {
             System.out.println("4) Из списка абонентов:\n" +
                     "\t- отсортировать по телефонному номеру\n" +
                     "\t- отфильтровать по возрасту от 20 до 30\n" +
-                    "\t- перевести первый символ имени и фамилии в верхний регистр\n" + // TODO в нижний
-                    "\t- перевести все символы кроме первого в нижний регистр\n" +      // TODO в верхний
+                    "\t- перевести первый символ имени и фамилии в верхний регистр\n" + // в нижний
+                    "\t- перевести все символы кроме первого в нижний регистр\n" +      // в верхний
                     "\t- вывести на консоль");
 
 
             List listSub4 = new ArrayList<>(Arrays.asList(tesrSubscibers)).stream()
                     .sorted(Comparator.comparing(Subscriber::getPhoneNumber))   // отсортировать по телефонному номеру
                     .filter(a->a.getAge()>=20 && a.getAge()<=30)                // отфильтровать по возрасту от 20 до 30
-                    .peek(System.out::println)
-                    .map(f-> f.getFirstName()
-                                .replace
-                                        (f.getFirstName().substring(0, 1),
-                                                f.getFirstName().substring(0, 1).toLowerCase()))
- /*                   .peek(f-> f.getFirstName()
-                                    .replace
-                                            (f.getFirstName().substring(0, 1),
-                                                    f.getFirstName().substring(0, 1).toLowerCase()))*/
 
-                    /*.peek(f-> {
-                            String replace = f.getFirstName()
-                                    .replace(f.getFirstName().substring(0, 1), f.getFirstName().substring(0, 1).toLowerCase());
-                    })*/
+   /*                 // 1 способ
+                    // перевести первый символ имени и фамилии в верхний регистр\n" + // в нижний
+                    .peek(f-> f.setFirstName(f.getFirstName()
+                            .replace
+                                    (f.getFirstName().substring(0, 1),
+                                            f.getFirstName().substring(0, 1).toLowerCase())))
+                    .peek(f-> f.setLastName(f.getLastName()
+                            .replace
+                                    (f.getLastName().substring(0, 1),
+                                            f.getLastName().substring(0, 1).toLowerCase())))
+                    // перевести все символы кроме первого в нижний регистр\n" +      // в верхний
+                    .peek(f-> f.setFirstName(f.getFirstName()
+                            .replace
+                                    (f.getFirstName().substring(1),
+                                            f.getFirstName().substring(1).toUpperCase())))
+                    .peek(f-> f.setLastName(f.getLastName()
+                            .replace
+                                    (f.getLastName().substring(1),
+                                            f.getLastName().substring(1).toUpperCase())))*/
+
+
+                    // 2 способ
+                    // перевести первый символ имени и фамилии в верхний регистр\n" + // в нижний
+                    .peek(f-> f.setFirstName(replaceFirstChar(f.getFirstName())))
+                    .peek(f-> f.setLastName(replaceFirstChar(f.getLastName())))
+                    // перевести все символы кроме первого в нижний регистр\n" +      // в верхний
+                    .peek(f-> f.setFirstName(replaceOtherChar(f.getFirstName())))
+                    .peek(f-> f.setLastName(replaceOtherChar(f.getLastName())))
                     .peek(System.out::println)
                     .collect(Collectors.toList());
             System.out.println();
@@ -109,4 +125,13 @@ public class TestStream {
 
 
     }
+
+    private static String replaceFirstChar (String str) {
+        return str.replace(str.substring(0, 1), str.substring(0, 1).toLowerCase());
+    }
+
+    private static String replaceOtherChar (String str) {
+        return str.replace(str.substring(1), str.substring(1).toUpperCase());
+    }
+
 }
