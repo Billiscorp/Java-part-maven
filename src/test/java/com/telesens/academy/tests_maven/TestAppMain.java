@@ -1,6 +1,6 @@
 package com.telesens.academy.tests_maven;
 
-import com.telesens.academy.lesson12_maven.AppMain;
+import com.telesens.academy.lesson10_Annotation_Maven.AppMain;
 import org.testng.annotations.Test;
 
 public class TestAppMain {

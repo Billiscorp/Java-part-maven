@@ -1,6 +1,6 @@
 package com.telesens.academy.EntryTests;
 
-import com.telesens.academy.lesson14.Entry;
+import com.telesens.academy.lesson12_Generic.Entry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

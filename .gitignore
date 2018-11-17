@@ -4,4 +4,5 @@ Java-part-maven.iml
 out/
 lib/
 target/
+data_Out/
 .gitignore
