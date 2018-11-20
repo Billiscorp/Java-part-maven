@@ -1,7 +1,5 @@
 package com.telesens.academy.lesson16_File;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 public class PropertyDemo {
@@ -18,4 +16,18 @@ public class PropertyDemo {
             e.printStackTrace();
         }
     }
+
+    public static String readProperty(String key) {
+        Properties prop = new Properties();
+        InputStream is = PropertyDemo.class.getClassLoader().getResourceAsStream("java-part.properties");
+        try(InputStreamReader isr = new InputStreamReader(is, "UTF-8")) {
+            prop.load(isr);
+            return prop.getProperty(key);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 }
