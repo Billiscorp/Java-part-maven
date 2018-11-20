@@ -22,6 +22,7 @@
 		female.firstnames=d:/myprojects/java-part/data/женские имена.txt
 		female.lastnames=d:/myprojects/java-part/data/женские фамилии.txt
 
+		// TODO
 		# Диапазон возрастов
 		age.from=5
 		age.to=90

@@ -16,10 +16,10 @@ public class TestFile {
 
 
 
-        ReaderFile readerFile = new ReaderFile();
+        /*ReaderFile readerFile = new ReaderFile();
         String [] 	maleFirstNames = readerFile.readFromFile("/home/billiscorp/Work/Telesens/QA-JA/Java-part-maven/data/Names_Male.txt");
         Arrays.stream(maleFirstNames)
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
     }
 
     /*2) Написать Java приложение, которое наполнит файл subscribers.xlsx, случайными данными:
